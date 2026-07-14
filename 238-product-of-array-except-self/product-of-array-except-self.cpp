@@ -29,14 +29,27 @@ public:
         //     }
         // }
         // return answer;
+        // vector<int> answer(nums.size(), 1);
+        // int p=1;
+        // for(int i=0;i<nums.size();i++){
+        //     answer[i]=p;
+        //     p*=nums[i];
+        // }
+        // int s=1;
+        // for(int i=nums.size()-1;i>=0;i--){
+        //     answer[i]*=s;
+        //     s*=nums[i];
+        // }
+        // return answer;
+
         vector<int> answer(nums.size(), 1);
         int p=1;
-        for(int i=0;i<nums.size();i++){
-            answer[i]=p;
-            p*=nums[i];
+        for(int i=1; i<nums.size(); i++){
+            p*=nums[i-1];
+            answer[i]*=p;
         }
         int s=1;
-        for(int i=nums.size()-1;i>=0;i--){
+        for(int i=nums.size()-1; i>=0; i--){
             answer[i]*=s;
             s*=nums[i];
         }
