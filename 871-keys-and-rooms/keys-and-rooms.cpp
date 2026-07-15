@@ -1,12 +1,10 @@
 class Solution {
 public:
     void helper(vector<vector<int>> &rooms, set<int> &s, int src){
-        if(s.count(src)){
-            s.erase(src);
-            for(auto &it: rooms[src]){
-                if(s.count(it)){
-                    helper(rooms, s, it);
-                }
+       s.erase(src);
+        for(auto &it: rooms[src]){
+            if(s.count(it)){
+                helper(rooms, s, it);
             }
         }
     }
