@@ -11,7 +11,6 @@
  */
 class Solution {
 public:
-    int sum=0;
     bool hasPathSum(TreeNode* root, int targetSum) {
         if(root==NULL){
             return false;
