@@ -1,15 +1,6 @@
 class Solution {
 public:
     int rob(vector<int>& nums) {
-        // int suma=0;
-        // int sumb=0;
-        // for(int i=0;i<nums.size();i++){
-        //     int newSum=max(suma+nums[i],sumb);
-        //     suma=sumb;
-        //     sumb=newSum;
-        // }
-        // return sumb;
-
         int n= nums.size();
         if(n==1){
             return nums[0];
